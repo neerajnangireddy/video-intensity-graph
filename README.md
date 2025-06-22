@@ -29,4 +29,4 @@ python3 viplot.py video.mkv
 ```
 
 ## Demo
-[watch here](viplot-demo.mp4)
+[watch here](https://github.com/user-attachments/assets/dd22375f-882f-4326-8ab2-e07f7633990b)
