@@ -28,5 +28,5 @@ pip3 install opencv-python plotly tqdm
 python3 viplot.py video.mkv
 ```
 
-
-
+## Demo
+[![watch here](https://i.postimg.cc/bJXnWcRg/Screenshot-20250622-183102.png)](viplot-demo.mp4)
