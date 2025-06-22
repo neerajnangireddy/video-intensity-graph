@@ -36,12 +36,10 @@ def process_video(filename: str | Path):
         frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
         # Sum the pixel values of the frame
-        n, m = frame.shape
-        intensity = (frame.sum() // (n * m))
-        intensities.append(intensity)
-        frame_count += 1
+        intensity = frame.mean()
         intensities.append(intensity)
         timestamps.append(timestamp)
+        frame_count += 1
         pbar.update(1)
     pbar.close()
     cap.release()
