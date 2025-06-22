@@ -24,7 +24,7 @@ git clone https://github.com/neerajnangireddy/video-intensity-graph
 cd video-intensity-graph
 python3 -m venv .venv
 source .venv/bin/activate
-pip3 install opencv-python plotly
+pip3 install opencv-python plotly tqdm
 python3 viplot.py video.mkv
 ```
 

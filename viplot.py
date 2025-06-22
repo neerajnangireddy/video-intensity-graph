@@ -3,6 +3,7 @@
 # dependencies = [
 #     "opencv-python",
 #     "plotly",
+#     "tqdm",
 # ]
 # ///
 
@@ -13,6 +14,7 @@ import cv2 as cv
 import plotly.graph_objs as go
 from pathlib import Path
 from time import strftime, gmtime
+from tqdm import tqdm
 
 def process_video(filename: str | Path):
     """Process video to compute summed pixel values of each frame."""
@@ -23,6 +25,7 @@ def process_video(filename: str | Path):
     intensities = []
     timestamps = []
 
+    pbar = tqdm(total=total_frames)
     while cap.isOpened() and frame_count < total_frames:
         ret, frame = cap.read()
         if not ret:
@@ -39,6 +42,8 @@ def process_video(filename: str | Path):
         frame_count += 1
         intensities.append(intensity)
         timestamps.append(timestamp)
+        pbar.update(1)
+    pbar.close()
     cap.release()
     return timestamps, intensities
 
