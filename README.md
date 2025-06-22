@@ -29,4 +29,4 @@ python3 viplot.py video.mkv
 ```
 
 ## Demo
-[watch here](https://raw.githubusercontent.com/neerajnangireddy/video-intensity-graph/refs/heads/main/viplot-demo.mp4)
+[watch here](viplot-demo.mp4)
